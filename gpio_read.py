@@ -1,4 +1,4 @@
-#! /usr/bin/python37all
+#!/usr/bin/python37all
 
 import RPi.GPIO as GPIO
 
