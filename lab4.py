@@ -12,7 +12,6 @@ with open('led-settings.txt', 'w') as f:
   f.write("{},{}".format( data.getvalue('LED'),  data.getvalue('Brightness')  ))
 
 
-
 print("""Content-type: text/html\n\n
 
 <html>
