@@ -4,12 +4,14 @@
 print("""
 
 Content-type:text/html\n\n
-<html><body>
 
-<font color = blue>
+<html><body><font color = red>
 
-aaaaaaaaa
 
+aaaaa
+
+</form>
 </body></html>
+
 
 """)

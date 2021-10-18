@@ -1,0 +1,4 @@
+change ennable to just ennable everything in the demo/*.py
+
+
+okay so radio buttons select one of 3 leds, a slider adjusts brightness from 0-100.
