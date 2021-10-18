@@ -25,7 +25,7 @@ for i in pwm:
   i.start(20) #start all LEDs off
 
 while True:
-  with open("led-settings.txt", 'r') as f:
+  with open("/usr/lib/cgi-bin/demo/led-settings.txt", 'r') as f:
 
     settings = split(f.read())  # create an array [ LED_selection , brighntess]
 
@@ -33,6 +33,8 @@ while True:
     dutyCycle = float(settings[1])
 
     LED.ChangeDutyCycle(dutyCycle)
+
+    f.close()
 
     with open("lab4_bg_log.txt", 'w') as log:
       log.write("I have set {} to {}".format(LED, dutyCycle))
