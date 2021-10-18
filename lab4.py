@@ -9,7 +9,7 @@ data = cgi.FieldStorage()
 
 with open('led-settings.txt', 'w') as f:
   # writes user-selected settings into a csv text file
-  f.write("{},{}".format( data.getvalue('LED'),  data.getvalue('Brightness')  )
+  f.write("{},{}".format( data.getvalue('LED'),  data.getvalue('Brightness')  ))
 
 
 
