@@ -19,8 +19,10 @@ blueLED = GPIO.PWM(BLUE, 100)
 
 pwm = [redLED, greenLED, blueLED]
 
+
+
 for i in pwm:
-  i.start(0) #start all LEDs off
+  i.start(20) #start all LEDs off
 
 while True:
   with open("led-settings.txt", 'r') as f:
@@ -31,4 +33,11 @@ while True:
     dutyCycle = float(settings[1])
 
     LED.ChangeDutyCycle(dutyCycle)
-    time.sleep(0.2)
+
+    with open("lab4_bg_log.txt", 'w') as log:
+      log.write("I have set {} to {}".format(LED, dutyCycle))
+
+  
+  time.sleep(0.2)
+
+  
