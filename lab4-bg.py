@@ -20,7 +20,7 @@ blueLED = GPIO.PWM(BLUE, 100)
 pwm = [redLED, greenLED, blueLED]
 
 for i in pwm:
-  i.start(50) #start all LEDs off
+  i.start(0) #start all LEDs off
 
 while True:
   with open("led-settings.txt", 'r') as f:
