@@ -27,7 +27,7 @@ for i in pwm:
 while True:
   with open("/usr/lib/cgi-bin/demo/led-settings.txt", 'r') as f:
 
-    settings = split(f.read())  # create an array [ LED_selection , brighntess]
+    settings = f.read().split(',')  # create an array [ LED_selection , brighntess]
 
     LED = pwm[int(settings[0])]
     dutyCycle = float(settings[1])
