@@ -7,10 +7,9 @@ import json
 
 # # takes in data passed by html page
 
-# old data export; using json formatting instead
-# data = cgi.FieldStorage()
+data = cgi.FieldStorage()
 
-data = {"LED":data.getvalue("LED"), "Brightness":data.getvalue("Brightness")
+settings = {"LED":data.getvalue("LED"), "Brightness":data.getvalue("Brightness")
 }
 
 
@@ -21,7 +20,7 @@ with open('led-settings.txt', 'w') as f:
   # Old code, still works for troubleshooting, but using json formatting instead
   # f.write("{},{}".format( data.getvalue('LED'),  data.getvalue('Brightness')  ))
 
-  json.dump(data, f)
+  json.dump(settings, f)
 
 
 print("""Content-type: text/html\n\n
