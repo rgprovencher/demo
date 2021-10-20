@@ -41,7 +41,7 @@ while True:
     # dutyCycle = float(settings[1])
 
 
-    LED.ChangeDutyCycle(dutyCycle)
+    pwm[LED].ChangeDutyCycle(dutyCycle)
 
     # close the door behind you
     f.close()
