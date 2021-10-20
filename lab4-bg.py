@@ -3,6 +3,8 @@
 import RPi.GPIO as GPIO
 import time
 
+GPIO.setmode(GPIO.BCM)
+
 RED = 26
 GREEN = 16
 BLUE = 13
@@ -22,7 +24,7 @@ pwm = [redLED, greenLED, blueLED]
 
 
 for i in pwm:
-  i.start(20) #start all LEDs dim
+  i.start(0) #start all LEDs off
 
 while True:
   with open("/usr/lib/cgi-bin/demo/led-settings.txt", 'r') as f:
