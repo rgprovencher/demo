@@ -3,7 +3,6 @@
 import cgi
 import cgitb
 cgitb.enable()
-
 import json
 
 # # takes in data passed by html page
@@ -11,7 +10,8 @@ import json
 # old data export; using json formatting instead
 # data = cgi.FieldStorage()
 
-data = {"LED":data.getvalue("LED"), "Brightness":data.getvalue("Brightness")}
+data = {"LED":data.getvalue("LED"), "Brightness":data.getvalue("Brightness")
+}
 
 
 
@@ -29,8 +29,8 @@ print("""Content-type: text/html\n\n
 <html>
 <form action =" /cgi-bin/demo/lab4.py" method="POST">
   <input type = "radio" name = "LED" value = "0" checked > Red <br>
-  <input type = "radio" name = "LED" value = "1" checked > Green <br>
-  <input type = "radio" name = "LED" value = "2" checked > Blue <br>
+  <input type = "radio" name = "LED" value = "1" > Green <br>
+  <input type = "radio" name = "LED" value = "2" > Blue <br>
   <br>
   <br>
   <input type = "range" name = "Brightness" min = "0" max = "100" value ="50"/>

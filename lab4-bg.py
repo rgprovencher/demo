@@ -2,6 +2,7 @@
 
 import RPi.GPIO as GPIO
 import time
+import datetime
 import json
 
 GPIO.setmode(GPIO.BCM)
@@ -50,6 +51,7 @@ while True:
     # troubleshooting
     with open("lab4_bg_log.txt", 'w') as log:
       log.write("I have set {} to {}".format(LED, dutyCycle))
+      log.write(datetime.now())
 
   
   time.sleep(0.2)
