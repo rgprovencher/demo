@@ -32,8 +32,8 @@ while True:
 
     data = json.load(f)
 
-    LED = data["LED"]
-    dutyCycle = data["Brightness"]
+    LED = int(data["LED"])
+    dutyCycle = int(data["Brightness"])
 
     # Old code, still works for troubleshooting but using json formatting instead
     # settings = f.read().split(',')  # create an array [ LED_selection , brighntess]
