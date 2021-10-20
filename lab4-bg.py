@@ -22,7 +22,7 @@ pwm = [redLED, greenLED, blueLED]
 
 
 for i in pwm:
-  i.start(20) #start all LEDs off
+  i.start(20) #start all LEDs dim
 
 while True:
   with open("/usr/lib/cgi-bin/demo/led-settings.txt", 'r') as f:
